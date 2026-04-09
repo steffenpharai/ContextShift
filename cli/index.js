@@ -139,15 +139,7 @@ function main() {
         continue;
       }
 
-      const dest = outDir
-        ? path.join(outDir, result.filename)
-        : path.join(path.dirname(inputFile), result.filename);
-
-      fs.mkdirSync(path.dirname(dest), { recursive: true });
-      fs.writeFileSync(dest, result.content, 'utf-8');
-      console.log(c('green', `✓  ${result.filename}`));
-
-      // Cursor produces multiple files
+      // Cursor produces multiple files — write those instead of the combined content
       if (result.files) {
         for (const f of result.files) {
           const fdest = outDir ? path.join(outDir, f.filename) : path.join(path.dirname(inputFile), f.filename);
@@ -155,6 +147,14 @@ function main() {
           fs.writeFileSync(fdest, f.content, 'utf-8');
           console.log(c('green', `✓  ${f.filename}`));
         }
+      } else {
+        const dest = outDir
+          ? path.join(outDir, result.filename)
+          : path.join(path.dirname(inputFile), result.filename);
+
+        fs.mkdirSync(path.dirname(dest), { recursive: true });
+        fs.writeFileSync(dest, result.content, 'utf-8');
+        console.log(c('green', `✓  ${result.filename}`));
       }
     } catch (err) {
       console.error(c('red', `✗  ${to}: ${err.message}`));

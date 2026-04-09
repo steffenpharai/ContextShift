@@ -1,0 +1,12 @@
+---
+description: Global project rules
+alwaysApply: true
+---
+
+# CLAUDE.md
+
+contextshift — CLI tool and Node.js library that translates AI context files between tools (CLAUDE.md, AGENTS.md, SOUL.md, .cursorrules, copilot-instructions.md, .windsurfrules, GEMINI.md, cowork-instructions.md). Zero dependencies.
+
+## Commands (reference only)
+- `node test/index.test.js` — run the test suite (custom harness, no framework)
+- `npx contextshift CLAUDE.md --to cursor --dry-run` — test a translation without writing files
