@@ -1,0 +1,30 @@
+{
+  "name": "contextshift",
+  "version": "0.1.0",
+  "description": "Translate AI context files between tools — CLAUDE.md, AGENTS.md, SOUL.md, .cursorrules, copilot-instructions.md, and more.",
+  "main": "src/index.js",
+  "bin": {
+    "contextshift": "./cli/index.js"
+  },
+  "scripts": {
+    "test": "node test/index.test.js"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "openclaw",
+    "cursor",
+    "copilot",
+    "ai-tools",
+    "context",
+    "CLAUDE.md",
+    "SOUL.md",
+    "AGENTS.md",
+    "windsurf",
+    "gemini"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
