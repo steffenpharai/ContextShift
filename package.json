@@ -4,7 +4,7 @@
   "description": "Translate AI context files between tools — CLAUDE.md, AGENTS.md, SOUL.md, .cursorrules, copilot-instructions.md, and more.",
   "main": "src/index.js",
   "bin": {
-    "contextshift": "./cli/index.js"
+    "contextshift": "cli/index.js"
   },
   "scripts": {
     "test": "node test/index.test.js"
