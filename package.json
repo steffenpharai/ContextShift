@@ -21,9 +21,28 @@
     "SOUL.md",
     "AGENTS.md",
     "windsurf",
-    "gemini"
+    "gemini",
+    "codex",
+    "cowork",
+    "developer-tools",
+    "cli"
   ],
+  "author": "Steffen Pharai <pharaisteffen@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steffenpharai/ContextShift.git"
+  },
+  "bugs": {
+    "url": "https://github.com/steffenpharai/ContextShift/issues"
+  },
+  "homepage": "https://github.com/steffenpharai/ContextShift#readme",
+  "files": [
+    "src/",
+    "cli/",
+    "README.md",
+    "LICENSE"
+  ],
   "engines": {
     "node": ">=18"
   }

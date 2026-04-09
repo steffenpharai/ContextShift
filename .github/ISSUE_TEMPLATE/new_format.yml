@@ -1,0 +1,31 @@
+name: New Format Support
+description: Request support for a new AI tool's context file format
+labels: ["new-format"]
+body:
+  - type: input
+    id: tool
+    attributes:
+      label: Tool name
+      description: "e.g. Aider, Continue, Cline"
+    validations:
+      required: true
+  - type: input
+    id: filename
+    attributes:
+      label: Context file name/path
+      description: "e.g. `.aider.conf.yml`, `.continue/config.json`"
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example file
+      description: Paste a real or representative example of this format.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: docs
+    attributes:
+      label: Documentation link
+      description: Link to the tool's docs on this file format, if available.

@@ -1,0 +1,45 @@
+name: Bug Report
+description: Something isn't working as expected
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: Input file
+      description: Paste the context file you used (or a minimal reproduction).
+      render: markdown
+    validations:
+      required: true
+  - type: input
+    id: command
+    attributes:
+      label: Command run
+      description: "e.g. `contextshift CLAUDE.md --to cursor`"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead? Include any error output.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: "Output of `npx contextshift --help` or `npm ls contextshift`"
